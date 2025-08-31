@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Proposal</title>
+  
+  <!-- ❤️ Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>❤️</text></svg>">
+  
+  <style>
+    body {
+      text-align: center;
+      font-family: Arial, sans-serif;
+      background-color: #ffe4ec;
+      overflow: hidden;
+      height: 100vh;
+      margin: 0;
+    }
+    img {
+      width: 300px;
+      margin-top: 20px;
+      border-radius: 20px;
+    }
+    h3 {
+      font-size: 24px;
+      margin: 20px;
+    }
+    #yes, #no {
+      padding: 12px 25px;
+      font-size: 18px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      margin: 10px;
+      position: absolute;
+    }
+    #yes {
+      background-color: #ff4d79;
+      color: white;
+      left: 40%;
+      top: 70%;
+    }
+    #no {
+      background-color: #444;
+      color: white;
+      left: 55%;
+      top: 70%;
+    }
+  </style>
+</head>
+<body>
+  <img src="https://th.bing.com/th/id/R.68ca7ee5bee024205d6c5ced2acdc5f4?rik=hCQXRAONJGb4Gw&riu=http%3a%2f%2fgetwallpapers.com%2fwallpaper%2ffull%2f6%2fe%2f1%2f952521-beautiful-cute-teddy-bear-wallpaper-1920x1524.jpg&ehk=BVXqcAGG5rfKbGrQUl9KpgAYlhkWLB7GadeSG3HnRXE%3d&risl=&pid=ImgRaw&r=0">
+  
+  <h3>Will you be my partner... 💖</h3>
+  
+  <button id="yes">Yes</button>
+  <button id="no">No</button>
+
+  <script>
+    const yesBtn = document.getElementById("yes");
+    const noBtn = document.getElementById("no");
+
+    yesBtn.addEventListener("click", () => {
+      alert("🎉 Congratulations 💕 You made me the happiest!");
+    });
+
+    // Function to move the "No" button randomly
+    function moveNoBtn() {
+      const x = Math.random() * (window.innerWidth - noBtn.offsetWidth);
+      const y = Math.random() * (window.innerHeight - noBtn.offsetHeight);
+      noBtn.style.left = `${x}px`;
+      noBtn.style.top = `${y}px`;
+    }
+
+    // For PC (hover)
+    noBtn.addEventListener("mouseover", moveNoBtn);
+
+    // For Mobile (when trying to tap)
+    noBtn.addEventListener("touchstart", moveNoBtn);
+  </script>
+</body>
+</html>
